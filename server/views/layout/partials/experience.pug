@@ -1,0 +1,12 @@
+
+blockquote.text-center Read about our clients and his experiences
+.row.experience
+    each exp in experience
+        .col-md-6.col-lg-4.mb-4
+            .card
+                .card-body
+                    blockquote.blockquote
+                        p.mb-0
+                            | #{exp.message}
+                        footer.blockquote-footer
+                            | #{exp.name}
