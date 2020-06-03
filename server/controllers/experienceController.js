@@ -34,12 +34,11 @@ exports.addExperience = async (req, res) => {
             experience
         })
     }else{
-        Experience.create({
+        await Experience.create({
             name,
             mail,
             message
         })
-        .then(experience => res.redirect('/experience'))
-        .catch(error => console.log(error));
+        res.redirect('/experience')
     }
 }
